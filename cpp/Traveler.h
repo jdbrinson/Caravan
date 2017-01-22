@@ -1,6 +1,7 @@
 //
 // Created by Julien Brinson on 1/21/17.
 //
+#include <ctime>
 
 #ifndef CARAVAN_TRAVELER_H
 #define CARAVAN_TRAVELER_H
@@ -9,10 +10,11 @@ class Traveler {
     string birthday;
     string passport_number;
     Map<string, string> airline_rewards();
-    string beginning_availability;
-    string end_availability;
+
     public:
     string name;
+    string beginning_availability;
+    string end_availability;
     void set_passport_number(string);
     int add_airline_rewards(string, string);
     void edit_name(string);
