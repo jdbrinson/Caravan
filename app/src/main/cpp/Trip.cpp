@@ -5,6 +5,7 @@
 #include "Trip.h"
 #include "Clique.h"
 #include "Traveler.h"
+//#include <string>
 using namespace std;
 
 Trip::Trip(string destination, bool overseas, string beginning, string end){

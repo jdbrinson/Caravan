@@ -5,8 +5,9 @@
 #include <map>
 #include <string>
 #include "Traveler.h"
+#include "Clique.h"
 
-using namespace std:
+using namespace std;
 
 #ifndef CARAVAN_TRIP_H
 #define CARAVAN_TRIP_H
@@ -19,7 +20,7 @@ class Trip {
     map<string, Traveler::Traveler> all_travelers;
 
     public:
-    add_traveler(Clique);
+    void add_traveler(Clique);
 
 };
 #endif //CARAVAN_TRIP_H

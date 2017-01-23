@@ -1,8 +1,7 @@
 //
 // Created by Julien Brinson on 1/21/17.
 //
-#include <string>
-using namespace std;
+
 
 /* things to do:
 1) create a trip class which is composed of clique objects
@@ -17,8 +16,13 @@ using namespace std;
     e. airline rewards number(s) (secured)
     f. bool - traveler
 */
-
-
+#include <jni.h>
+extern "C"
+#include <map>
+#include <string>
+#include "Trip.h"
+#include "Traveler.h"
+#include "Clique.h"
 
 
 

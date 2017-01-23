@@ -2,14 +2,15 @@
 // Created by Julien Brinson on 1/21/17.
 //
 #include <ctime>
-
+#include <string>
+using namespace std;
 #ifndef CARAVAN_TRAVELER_H
 #define CARAVAN_TRAVELER_H
 class Traveler {
     bool travel_agent;
     string birthday;
     string passport_number;
-    Map<string, string> airline_rewards();
+    map<string, string> airline_rewards();
 
     public:
     string name;
