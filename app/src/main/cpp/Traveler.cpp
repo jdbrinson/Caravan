@@ -14,7 +14,7 @@ bool travel_agent;
     Map<string, string> airline_rewards;
 */
 
-Traveler::Traveler(string nm, string dob, bool agent?, string window_open, string window_close){
+Traveler::Traveler(string nm, string dob, bool agent?, string window_open, string ){
     name = nm;
     birthday = dob;
     travel_agent = agent?;
@@ -23,7 +23,7 @@ Traveler::Traveler(string nm, string dob, bool agent?, string window_open, strin
 }
 
 
-void Travler::edit_name(string new_name){
+void Traveler::edit_name(string new_name){
     name = new_name;
 }
 

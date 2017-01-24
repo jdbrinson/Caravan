@@ -7,9 +7,16 @@
 #include "Traveler.h"
 
 class Clique{
-    vector<Traveler::Traveler> ride_or_dies ();
+private:
+
+    map<std::string, Traveler> ride_or_dies();
     string open_available;
     string close_available;
+
+public:
+    Clique();
+    void add_member(Traveler *person);
+    void remove_member(string name);
 
 };
 #endif //CARAVAN_CLIQUE_H

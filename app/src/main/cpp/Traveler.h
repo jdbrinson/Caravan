@@ -13,6 +13,7 @@ class Traveler {
     map<string, string> airline_rewards();
 
     public:
+    Traveler(string name, string birthday);
     string name;
     string beginning_availability;
     string end_availability;

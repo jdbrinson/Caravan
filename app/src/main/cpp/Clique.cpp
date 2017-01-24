@@ -10,6 +10,10 @@ Clique::Clique(){
     close_available = ;
 }
 
-Clique::add_member(string name){
-    ride_or_dies.push_back(name);
+Clique::add_member(Traveler *people) {
+    ride_or_dies[person->name]  = people;
+}
+
+Clique::remove_member(string name){
+
 }

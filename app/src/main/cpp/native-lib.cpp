@@ -20,6 +20,7 @@
 extern "C"
 #include <map>
 #include <string>
+#include "location.h"
 #include "Trip.h"
 #include "Traveler.h"
 #include "Clique.h"
