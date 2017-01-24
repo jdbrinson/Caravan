@@ -17,7 +17,6 @@
     f. bool - traveler
 */
 #include <jni.h>
-extern "C"
 #include <map>
 #include <string>
 #include "location.h"

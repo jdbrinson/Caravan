@@ -12,9 +12,12 @@ class Location{
     string loc_name;
     vector<string> airports;
     vector<string> accomodations;
-public:
-    location();
-    
+
+    public:
+    Location(string destination);
+    void add_airport(string airport);
+    void add_accomodation(string accomodation);
+
 };
 
 #endif //CARAVAN_LOCATION_H

@@ -12,11 +12,13 @@ private:
     map<std::string, Traveler> ride_or_dies();
     string open_available;
     string close_available;
+    bool travel_booked;
 
 public:
     Clique();
     void add_member(Traveler *person);
     void remove_member(string name);
+    bool equals(Clique &compare_clique);
 
 };
 #endif //CARAVAN_CLIQUE_H

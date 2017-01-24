@@ -10,21 +10,28 @@ using namespace std;
 
 //Trip::Trip(string destination, bool overseas, string beginning, string end)
 
-Trip::Trip(string start_date, string end_date, string destination, vector<Clique::Clique> all_groups, map<string, Traveler::Traveler> all_travelers)
+Trip::Trip(string start_date, string end_date, string location, vector<Clique::Clique> all_groups, map<string, Traveler> all_travelers)
 {
-    location = destination;
-    international = overseas;
-    start_date = beginning;
-    end_date = end;
+    destination = location;
+    trip_beginning = start_date;
+    trip_end = end_date;
 
 }
 
 
-Trip::add_traveler(Traveler::Traveler explorer){
-    all_travelers[explorer.name] = explorer;
+void Trip::add_traveler(Traveler &explorer){
+    all_travelers[explorer.get_name()] = explorer;
 
 }
 
-Trip::add_clique(Clique::Clique pack){
+void Trip::add_travel_group(Clique &pack){
     all_groups.push_back(pack);
+}
+
+void Trip::remove_travel_group(Clique &clique) {
+    for(vector<Clique>::iterator it = all_groups.begin(); it != all_groups.end();++it){
+        if(it->equals(clique)){
+            all_groups.erase(it);
+        }
+    }
 }
