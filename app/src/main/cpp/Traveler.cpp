@@ -44,8 +44,15 @@ void Traveler::add_airline_rewards(string airline, string rewards_number){
 
 }
 
-void Traveler::travel_is_booked(){
+void Traveler::travel_is_booked() {
     travel_arranged = true;
 }
 
+const string Traveler::get_available_start(){
+    return this->beginning_availability;
+}
+
+const string Traveler::get_available_end(){
+    return this->end_availability;
+}
 

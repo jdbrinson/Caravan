@@ -9,15 +9,16 @@
 class Clique{
 private:
 
-    map<std::string, Traveler> ride_or_dies();
+    map<std::string, Traveler> ride_or_dies;
     string open_available;
     string close_available;
     bool travel_booked;
+    void update_window();
 
 public:
     Clique();
-    void add_member(Traveler *person);
-    void remove_member(string name);
+    void add_member(Traveler &person);
+    void remove_member(Traveler &person);
     bool equals(Clique &compare_clique);
 
 };
