@@ -7,7 +7,8 @@ public class MainActivity extends AppCompatActivity {
 
     //used to load the libraries
     static {
-        System.loadLibrary("native-lib");
+        //System.loadLibrary("native-lib");
+        System.loadLibrary("boost-time");
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
