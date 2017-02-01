@@ -28,8 +28,8 @@ class Traveler {
     void edit_name(string);
     void edit_birthday(string);
     void travel_is_booked();
-    const string get_available_start;
-    const string get_available_end;
+    const string get_available_start();
+    const string get_available_end ();
 
 };
 #endif //CARAVAN_TRAVELER_H

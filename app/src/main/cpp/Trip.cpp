@@ -10,7 +10,9 @@ using namespace std;
 
 //Trip::Trip(string destination, bool overseas, string beginning, string end)
 
-Trip::Trip(string start_date, string end_date, string location, vector<Clique::Clique> all_groups, map<string, Traveler> all_travelers)
+
+Trip::Trip(string start_date, string end_date, string location)
+
 {
     destination = location;
     trip_beginning = start_date;
@@ -20,8 +22,7 @@ Trip::Trip(string start_date, string end_date, string location, vector<Clique::C
 
 
 void Trip::add_traveler(Traveler &explorer){
-    all_travelers[explorer.get_name()] = explorer;
-
+    all_travelers.insert(pair<string, Traveler>(explorer.get_name(), explorer));
 }
 
 void Trip::add_travel_group(Clique &pack){

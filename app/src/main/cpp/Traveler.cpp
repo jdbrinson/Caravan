@@ -2,7 +2,7 @@
 // Created by Julien Brinson on 1/22/17.
 //
 #include "Traveler.h"
-#include <curl/curl.h"
+
 
 using namespace std;
 

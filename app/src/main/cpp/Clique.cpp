@@ -2,7 +2,9 @@
 // Created by Julien Brinson on 1/22/17.
 //
 #include "Clique.h"
+//#include "boost_1_63_0/boost/date_time.hpp"
 #include <vector>
+
 using namespace std;
 
 Clique::Clique(){
@@ -10,8 +12,9 @@ Clique::Clique(){
 
 }
 
+
 void Clique::add_member(Traveler &person){
-    ride_or_dies[person.get_name()]  = person;
+    ride_or_dies.insert(pair<string, Traveler>(person.get_name(), person));
     update_window();
 }
 
@@ -21,19 +24,20 @@ void Clique::remove_member(Traveler &person){
 }
 
 bool Clique::equals(Clique &compare_clique){
-    return ride_or_dies == compare_clique.ride_or_dies;
+    //return ride_or_dies == compare_clique.ride_or_dies;
+    return true;
 }
 
 void Clique::update_window(){
     for(map<std::string, Traveler>::iterator it = ride_or_dies.begin(); it != ride_or_dies.end(); ++it){
         //if the traveler's begining availablity is smaller/after the Clique's open availability
         //reset the Clique's availability to be the most restrictive
-        if(open_available < it->second.get_available_start){
-            open_available = it->second.get_available_start;
+        if(open_available < it->second.get_available_start()){
+            open_available = it->second.get_available_start();
         }
         //same thing for the end availability. to get the most restrictive
-        if(close_available > it->second.get_available_end){
-            close_available = it->second.get_available_end;
+        if(close_available > it->second.get_available_end()){
+            close_available = it->second.get_available_end();
         }
     }
 }

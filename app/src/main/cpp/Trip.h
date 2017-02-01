@@ -3,7 +3,6 @@
 //
 #include <vector>
 #include <map>
-//#include <string>
 #include "Traveler.h"
 #include "Clique.h"
 
@@ -22,7 +21,7 @@ class Trip {
     public:
 
     //constructor for a trip object
-    Trip(string start_date, string end_date, string location, vector<Clique::Clique> all_groups, map<string, Traveler::Traveler> all_travelers);
+    Trip(string start_date, string end_date, string location);
 
     // adds traveler to the trip
     void add_traveler(Traveler &new_traveler);

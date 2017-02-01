@@ -23,7 +23,20 @@
 #include "Trip.h"
 #include "Traveler.h"
 #include "Clique.h"
+#include "boost/date_time/posix_time/posix_time.hpp"
+
+using namespace boost::posix_time;
+using namespace boost::gregorian;
 
 
+extern "C"
+jstring
+Java_com_example_julienbrinson_caravan_MainActivity_stringFromJNI(
+        JNIEnv *env,
+        jobject /* this */) {
+    ptime now = second_clock::local_time();
+    std::string hello = "The NEW time is " + to_simple_string(now);
+    return env->NewStringUTF(hello.c_str());
+}
 
 
